@@ -116,7 +116,7 @@ def train(model, optimizer, train_x, train_y, n_way, n_support, n_query, epoch, 
   running_acc = 0.0
 
   # enforce regularization on the weights and bias parameters across all layers
-  L1_regularization = 0
+  #L1_regularization = 0
   L2_regulization = 0
 
   for episode in tnrange(train_episode, desc=f"Epoch {epoch+1} train: "):
@@ -129,10 +129,10 @@ def train(model, optimizer, train_x, train_y, n_way, n_support, n_query, epoch, 
 
     # to reduce overfitting, we will pernalize the model for high weight values during training
     # by applying regularization
-    L1_regularization = torch.tensor(0., requires_grad=True) 
+    #L1_regularization = torch.tensor(0., requires_grad=True) 
     L2_regularization = torch.tensor(0., requires_grad=True)  
     for param in model.parameters():
-      L1_regularization = L1_regularization + torch.norm(param, 1) # get the absolute value of the weight & bias values across layers
+      #L1_regularization = L1_regularization + torch.norm(param, 1) # get the absolute value of the weight & bias values across layers
       L2_regularization = L2_regularization + torch.norm(param, 2)
 
     # use L1 regularization
@@ -186,7 +186,7 @@ def validate(model, validation_x, validation_y, n_way, n_support, n_query, epoch
   
   return avg_loss, avg_acc
 
-def test_model_one_one_task(model, n_way, n_support, n_query, test_episodes, x_test, y_test):
+def test_model_on_one_task(model, n_way, n_support, n_query, test_episodes, x_test, y_test):
   """
   Tests the Prototypical Netweork on a test set
 
