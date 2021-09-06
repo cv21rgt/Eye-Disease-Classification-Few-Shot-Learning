@@ -15,6 +15,15 @@ At the time of carrying out this research the author did not have any access to 
 The data is made available in this repo as a compressed file **data.zip**.
 
 ## Methodology
-The FSL approach used in this study is based on Prototypical Networks proposed by [Snell et. al (2017)](https://arxiv.org/abs/1703.05175). The author used [transfer learning](https://www.allerin.com/blog/how-to-fine-tune-your-artificial-intelligence-algorithms) and [fine tuning](https://machinelearningmastery.com/how-to-improve-performance-with-transfer-learning-for-deep-learning-neural-networks/) to extract vector embeddings. See the Jupyter notebooks **Transfer_Learning.ipynb** and **Fine_Tuning.ipynb** for code. The Euclidean distance was used as the metric for classifying query images.
+The FSL approach used in this study is based on Prototypical Networks proposed by [Snell et. al (2017)](https://arxiv.org/abs/1703.05175). The author used [transfer learning](https://www.allerin.com/blog/how-to-fine-tune-your-artificial-intelligence-algorithms) and [fine tuning](https://machinelearningmastery.com/how-to-improve-performance-with-transfer-learning-for-deep-learning-neural-networks/). In both cases [VGG19](https://arxiv.org/abs/1409.1556), [ResNet50](https://arxiv.org/abs/1512.03385) and [DenseNet121](https://arxiv.org/abs/1608.06993) deep learning models where used as the feature extractors and the results compared. See the Jupyter notebooks **Transfer_Learning.ipynb** and **Fine_Tuning.ipynb** for code. The Euclidean distance was used as the metric for classifying query images.
 
 ## Results
+a. FSL test accuracy (%) when using transfer learning for feature extraction
+Since there is no model training during transfer learning, the Prototypical Network was simply evaluated on the eye image test dataset. For each test, the model was allowed to see 1 or 5 examples per class (Support set) and each time asked to predict or classify 10 randomly selected images (Query set). The test results are summarized as follows:
+
+|Pre-trained network used as feature extractor| 2-way | 3-way |
+|                                             | 1-shot| 5-shot| 1-shot| 5-shot|
+|-----------------------------------------------------------------------------|
+|VGG19                                        | 72.24 | 91.18 | 63.66 | 84.05 |
+|ResNet50                                     | 80.11 | 92.26 | 69.08 | 86.42 |
+|DenseNet121                                  | 84.89 | 95.29 | 75.58 | 91.05 |
