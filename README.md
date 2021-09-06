@@ -22,8 +22,9 @@ a. FSL test accuracy (%) when using transfer learning for feature extraction
 Since there is no model training during transfer learning, the Prototypical Network was simply evaluated on the eye image test dataset. For each test, the model was allowed to see 1 or 5 examples per class (Support set) and each time asked to predict or classify 10 randomly selected images (Query set). The test results are summarized as follows:
 
 |Pre-trained network used as feature extractor| 2-way | 3-way |
+|---------------------------------------------|-------|-------|
 |                                             | 1-shot| 5-shot| 1-shot| 5-shot|
-|-----------------------------------------------------------------------------|
+|---------------------------------------------|-------|-------|-------|-------|
 |VGG19                                        | 72.24 | 91.18 | 63.66 | 84.05 |
 |ResNet50                                     | 80.11 | 92.26 | 69.08 | 86.42 |
 |DenseNet121                                  | 84.89 | 95.29 | 75.58 | 91.05 |
