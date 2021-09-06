@@ -12,8 +12,9 @@ At the time of carrying out this research the author did not have any access to 
 |Validation | Uveitis, Stye|
 |Testing | Conjunctivis, Trachoma, Strabismus|
 
-The data is made available in this repo as a compressed file data.zip.
+The data is made available in this repo as a compressed file **data.zip**.
 
 ## Methodology
+The FSL approach used in this study is based on Prototypical Networks proposed by [Snell et. al (2017)](https://arxiv.org/abs/1703.05175). The author used [transfer learning](https://www.allerin.com/blog/how-to-fine-tune-your-artificial-intelligence-algorithms) and [fine tuning](https://machinelearningmastery.com/how-to-improve-performance-with-transfer-learning-for-deep-learning-neural-networks/) to extract vector embeddings. See the Jupyter notebooks **Transfer_Learning.ipynb** and **Fine_Tuning.ipynb** for code. The Euclidean distance was used as the metric for classifying query images.
 
 ## Results
