@@ -6,11 +6,11 @@ To tackle this problem, this repository diverges from current research and inves
 ## Dataset
 At the time of carrying out this research the author did not have any access to a publicly available dataset of disease infected eye images taken by smartphones. As a result, the author created a new dataset by leveraging the power of Google Images. Annotated images were downloaded from online medical journals, blogs as well as websites for medical practitioners. The author also took into account issues of gender, race, geographical location as well as whether it's the right or left eye. This was done in an effort to gather a representative dataset. When it comes to FSL, training, validation and testing datasets are split using the classes. The distribution of the image data collected in this study is summarized as below. Each class contains 30 images.
 
-Training Classes | Cataract, Glaucoma, Healthy, Pterygium, Keratoconus
----------------- |
-Validation Classes | Uveitis, Stye
------------------- |
-Testing Classes | Conjunctivis, Trachoma, Strabismus
+|Data | Classes|
+|-----|--------|
+|Training | Cataract, Glaucoma, Healthy, Pterygium, Keratoconus|
+|Validation | Uveitis, Stye|
+|Testing | Conjunctivis, Trachoma, Strabismus|
 
 The data is made available in this repo as a compressed file data.zip.
 
